@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-PreEntrega1JavaApplication<Pre-Entrega-1-Java>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.coderhouse.Pre.Entrega1.Java.PreEntrega1JavaApplication",
+            "projectName": "Pre-Entrega-1-Java",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}
