@@ -11,19 +11,23 @@ public class Pedido {
     private Long id;
 
     private String descripcion;
+    
     private LocalDateTime fechaHora;
 
-    @ManyToOne
-    @JoinColumn(name = "persona_id")
+    @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @JoinColumn(name = "persona_id", nullable = false)
     private Persona persona;
 
-    
     public Pedido() {}
 
     public Pedido(String descripcion, Persona persona) {
         this.descripcion = descripcion;
-        this.fechaHora = LocalDateTime.now();
         this.persona = persona;
+    }
+
+    @PrePersist
+    protected void onCreate() {
+        this.fechaHora = LocalDateTime.now();
     }
 
     public Long getId() {
@@ -46,10 +50,6 @@ public class Pedido {
         return fechaHora;
     }
 
-    public void setFechaHora(LocalDateTime fechaHora) {
-        this.fechaHora = fechaHora;
-    }
-
     public Persona getPersona() {
         return persona;
     }
@@ -57,5 +57,8 @@ public class Pedido {
     public void setPersona(Persona persona) {
         this.persona = persona;
     }
-}
 
+    public void setFechaHora(LocalDateTime fechaHora) {
+        this.fechaHora = fechaHora;
+    }
+}

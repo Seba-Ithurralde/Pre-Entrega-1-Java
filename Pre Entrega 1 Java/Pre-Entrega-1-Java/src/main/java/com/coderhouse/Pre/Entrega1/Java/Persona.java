@@ -1,6 +1,8 @@
 package com.coderhouse.Pre.Entrega1.Java;
 
 import jakarta.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 public class Persona {
@@ -11,6 +13,9 @@ public class Persona {
 
     private String nombre;
     private String correo;
+
+    @OneToMany(mappedBy = "persona", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<Pedido> pedidos = new ArrayList<>();
 
     public Persona() {}
 
@@ -42,5 +47,22 @@ public class Persona {
     public void setCorreo(String correo) {
         this.correo = correo;
     }
-}
 
+    public List<Pedido> getPedidos() {
+        return pedidos;
+    }
+
+    public void setPedidos(List<Pedido> pedidos) {
+        this.pedidos = pedidos;
+    }
+
+    public void agregarPedido(Pedido pedido) {
+        pedidos.add(pedido);
+        pedido.setPersona(this);
+    }
+
+    public void eliminarPedido(Pedido pedido) {
+        pedidos.remove(pedido);
+        pedido.setPersona(null);
+    }
+}
