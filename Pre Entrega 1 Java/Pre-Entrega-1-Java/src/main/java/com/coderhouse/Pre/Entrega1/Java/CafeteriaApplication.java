@@ -23,7 +23,7 @@ public class CafeteriaApplication implements CommandLineRunner {
     @Override
     @Transactional
     public void run(String... args) throws Exception {
-        // Crear y guardar personas
+        // Creo y guardo personas
         Persona persona1 = personaRepository.save(new Persona("Juan Pérez", "juan@email.com"));
         Persona persona2 = personaRepository.save(new Persona("Ana González", "ana@email.com"));
     
