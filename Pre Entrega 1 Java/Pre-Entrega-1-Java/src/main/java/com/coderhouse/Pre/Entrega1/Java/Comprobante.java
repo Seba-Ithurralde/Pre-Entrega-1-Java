@@ -50,4 +50,29 @@ public class Comprobante {
     public int getCantidadTotal() {
         return cantidadTotal;
     }
+
+    public void setCliente(Cliente cliente2) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'setCliente'");
+    }
+
+    public void setLineas(List<Linea> lineas2) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'setLineas'");
+    }
+
+    public void setFecha(Date fechaComprobante) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'setFecha'");
+    }
+
+    public void setTotal(double totalVenta) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'setTotal'");
+    }
+
+    public void setCantidadTotal(int totalProductos) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'setCantidadTotal'");
+    }
 }

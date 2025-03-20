@@ -1,14 +1,5 @@
 package com.coderhouse.Pre.Entrega1.Java;
 
-import com.coderhouse.Pre.Entrega1.Java.ComprobanteRequestDTO;
-import com.coderhouse.Pre.Entrega1.Java.ComprobanteResponseDTO;
-import com.coderhouse.Pre.Entrega1.Java.Cliente;
-import com.coderhouse.Pre.Entrega1.Java.Comprobante;
-import com.coderhouse.Pre.Entrega1.Java.Linea;
-import com.coderhouse.Pre.Entrega1.Java.Producto;
-import com.coderhouse.Pre.Entrega1.Java.ClienteRepository;
-import com.coderhouse.Pre.Entrega1.Java.ComprobanteRepository;
-import com.coderhouse.Pre.Entrega1.Java.ProductoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -16,7 +7,7 @@ import org.springframework.web.client.RestTemplate;
 
 import java.util.Date;
 import java.util.List;
-import java.util.Optional;
+
 import java.util.stream.Collectors;
 
 @Service
@@ -42,8 +33,8 @@ public class ComprobanteService {
                     .orElseThrow(() -> new RuntimeException("Cliente no encontrado"));
 
             // 2️⃣ Valido productos, stock y calculo el total
-            double totalVenta = 0.0;
-            int totalProductos = 0;
+            final double[] totalVenta = {0.0};
+            final int[] totalProductos = {0};
 
             List<Linea> lineas = requestDTO.getLineas().stream().map(lineaDTO -> {
                 Producto producto = productoRepository.findById(lineaDTO.getProducto().getProductoid())
@@ -65,8 +56,8 @@ public class ComprobanteService {
                 linea.setPrecioUnitario(producto.getPrecio()); // Mantengo el precio original
 
                 // 6️⃣ Calculo totales
-                totalVenta += producto.getPrecio() * lineaDTO.getCantidad();
-                totalProductos += lineaDTO.getCantidad();
+                totalVenta[0] += producto.getPrecio() * lineaDTO.getCantidad();
+                totalProductos[0] += lineaDTO.getCantidad();
 
                 return linea;
             }).collect(Collectors.toList());
@@ -79,8 +70,8 @@ public class ComprobanteService {
             comprobante.setCliente(cliente);
             comprobante.setLineas(lineas);
             comprobante.setFecha(fechaComprobante);
-            comprobante.setTotal(totalVenta);
-            comprobante.setCantidadTotal(totalProductos);
+            comprobante.setTotal(totalVenta[0]);
+            comprobante.setCantidadTotal(totalProductos[0]);
 
             comprobanteRepository.save(comprobante);
 
@@ -88,8 +79,8 @@ public class ComprobanteService {
             return new ComprobanteResponseDTO(
                     "Comprobante creado exitosamente",
                     fechaComprobante,
-                    totalVenta,
-                    totalProductos
+                    totalVenta[0],
+                    totalProductos[0]
             );
 
         } catch (Exception error) {

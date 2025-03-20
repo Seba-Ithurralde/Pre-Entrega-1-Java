@@ -38,5 +38,20 @@ public class Linea {
     public double getPrecioUnitario() {
         return precioUnitario;
     }
+
+    public void setPrecioUnitario(double precio) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'setPrecioUnitario'");
+    }
+
+    public void setProducto(Producto producto2) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'setProducto'");
+    }
+
+    public void setCantidad(int cantidad2) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'setCantidad'");
+    }
 }
 
