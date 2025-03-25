@@ -1,8 +1,12 @@
-package com.coderhouse.Pre.Entrega1.Java;
+package com.coderhouse.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+
+import com.coderhouse.dto.ComprobanteRequestDTO;
+import com.coderhouse.dto.ComprobanteResponseDTO;
+import com.coderhouse.service.ComprobanteService;
 
 @RestController
 @RequestMapping("/comprobantes")

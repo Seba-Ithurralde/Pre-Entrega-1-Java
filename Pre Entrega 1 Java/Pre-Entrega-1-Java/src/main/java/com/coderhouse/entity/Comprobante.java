@@ -1,4 +1,4 @@
-package com.coderhouse.Pre.Entrega1.Java;
+package com.coderhouse.entity;
 
 import jakarta.persistence.*;
 import java.util.Date;

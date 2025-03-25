@@ -1,6 +1,10 @@
-package com.coderhouse.Pre.Entrega1.Java;
+package com.coderhouse.service;
 
 import org.springframework.stereotype.Service;
+
+import com.coderhouse.entity.Persona;
+import com.coderhouse.repository.PersonaRepository;
+
 import lombok.RequiredArgsConstructor;
 
 import java.util.List;

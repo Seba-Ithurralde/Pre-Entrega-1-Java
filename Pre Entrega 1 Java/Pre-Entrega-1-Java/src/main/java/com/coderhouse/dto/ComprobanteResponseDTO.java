@@ -1,4 +1,4 @@
-package com.coderhouse.Pre.Entrega1.Java;
+package com.coderhouse.dto;
 
 import java.util.Date;
 

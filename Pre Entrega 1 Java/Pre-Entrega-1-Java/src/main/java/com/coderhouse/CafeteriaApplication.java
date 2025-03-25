@@ -1,9 +1,14 @@
-package com.coderhouse.Pre.Entrega1.Java;
+package com.coderhouse;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+import com.coderhouse.entity.Pedido;
+import com.coderhouse.entity.Persona;
+import com.coderhouse.repository.PedidoRepository;
+import com.coderhouse.repository.PersonaRepository;
 
 import jakarta.transaction.Transactional;
 

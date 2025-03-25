@@ -1,4 +1,4 @@
-package com.coderhouse.Pre.Entrega1.Java;
+package com.coderhouse.dto;
 
 public class LineaDTO {
     private int cantidad;
