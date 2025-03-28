@@ -1,4 +1,4 @@
-package com.coderhouse.dto;
+package com.coderhouse.Pre.Entrega1.Java.dto;
 
 public class ClienteDTO {
     private Long clienteid;

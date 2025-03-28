@@ -5,10 +5,10 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-import com.coderhouse.entity.Pedido;
-import com.coderhouse.entity.Persona;
-import com.coderhouse.repository.PedidoRepository;
-import com.coderhouse.repository.PersonaRepository;
+import com.coderhouse.Pre.Entrega1.Java.entity.Pedido;
+import com.coderhouse.Pre.Entrega1.Java.entity.Persona;
+import com.coderhouse.Pre.Entrega1.Java.repository.PedidoRepository;
+import com.coderhouse.Pre.Entrega1.Java.repository.PersonaRepository;
 
 import jakarta.transaction.Transactional;
 

@@ -1,19 +1,19 @@
-package com.coderhouse.service;
+package com.coderhouse.Pre.Entrega1.Java.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.client.RestTemplate;
 
-import com.coderhouse.dto.ComprobanteRequestDTO;
-import com.coderhouse.dto.ComprobanteResponseDTO;
-import com.coderhouse.entity.Cliente;
-import com.coderhouse.entity.Comprobante;
-import com.coderhouse.entity.Linea;
-import com.coderhouse.entity.Producto;
-import com.coderhouse.repository.ClienteRepository;
-import com.coderhouse.repository.ComprobanteRepository;
-import com.coderhouse.repository.ProductoRepository;
+import com.coderhouse.Pre.Entrega1.Java.dto.ComprobanteRequestDTO;
+import com.coderhouse.Pre.Entrega1.Java.dto.ComprobanteResponseDTO;
+import com.coderhouse.Pre.Entrega1.Java.entity.Cliente;
+import com.coderhouse.Pre.Entrega1.Java.entity.Comprobante;
+import com.coderhouse.Pre.Entrega1.Java.entity.Linea;
+import com.coderhouse.Pre.Entrega1.Java.entity.Producto;
+import com.coderhouse.Pre.Entrega1.Java.repository.ClienteRepository;
+import com.coderhouse.Pre.Entrega1.Java.repository.ComprobanteRepository;
+import com.coderhouse.Pre.Entrega1.Java.repository.ProductoRepository;
 
 import java.util.Date;
 import java.util.List;

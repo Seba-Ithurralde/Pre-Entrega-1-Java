@@ -1,4 +1,4 @@
-package com.coderhouse.entity;
+package com.coderhouse.Pre.Entrega1.Java.entity;
 
 import jakarta.persistence.*;
 import java.util.ArrayList;

@@ -1,9 +1,9 @@
-package com.coderhouse.service;
+package com.coderhouse.Pre.Entrega1.Java.service;
 
 import org.springframework.stereotype.Service;
 
-import com.coderhouse.entity.Pedido;
-import com.coderhouse.repository.PedidoRepository;
+import com.coderhouse.Pre.Entrega1.Java.entity.Pedido;
+import com.coderhouse.Pre.Entrega1.Java.repository.PedidoRepository;
 
 import lombok.RequiredArgsConstructor;
 

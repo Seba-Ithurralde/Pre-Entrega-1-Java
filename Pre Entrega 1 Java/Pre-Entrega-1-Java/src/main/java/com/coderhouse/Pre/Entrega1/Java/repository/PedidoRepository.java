@@ -1,8 +1,8 @@
-package com.coderhouse.repository;
+package com.coderhouse.Pre.Entrega1.Java.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import com.coderhouse.entity.Pedido;
+import com.coderhouse.Pre.Entrega1.Java.entity.Pedido;
 
 import java.util.List;
 

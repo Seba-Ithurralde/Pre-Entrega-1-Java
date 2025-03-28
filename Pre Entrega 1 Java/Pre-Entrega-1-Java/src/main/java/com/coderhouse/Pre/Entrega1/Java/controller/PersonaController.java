@@ -1,4 +1,4 @@
-package com.coderhouse.controller;
+package com.coderhouse.Pre.Entrega1.Java.controller;
 
 import java.util.List;
 
@@ -12,8 +12,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.coderhouse.entity.Persona;
-import com.coderhouse.service.PersonaService;
+import com.coderhouse.Pre.Entrega1.Java.entity.Persona;
+import com.coderhouse.Pre.Entrega1.Java.service.PersonaService;
 
 import lombok.RequiredArgsConstructor;
 
